@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gca-xd-tu8">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="akg-Cb-gwL">
+            <objects>
+                <controller id="Gca-xd-tu8" customClass="InterfaceController" customModule="MemorizingApp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Enter Name" id="gOf-iM-lxS">
+                            <connections>
+                                <action selector="nameButtonClicked" destination="Gca-xd-tu8" id="v7N-cz-WjX"/>
+                            </connections>
+                        </button>
+                        <label width="94" alignment="center" verticalAlignment="center" text="            -" id="HRe-Nj-PGe"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Start Game" id="47C-eh-cWo">
+                            <connections>
+                                <action selector="startGameButtonClicked" destination="Gca-xd-tu8" id="BEW-60-FWO"/>
+                                <segue destination="gta-t2-B8I" kind="push" id="fKt-C9-xr3"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="NameLabel" destination="HRe-Nj-PGe" id="O7g-dG-rJ3"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-517" y="-209"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="8g0-xZ-yPy">
+            <objects>
+                <controller id="gta-t2-B8I" customClass="InterfaceController" customModule="MemorizingApp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" spacing="3" id="01U-Gu-UzO">
+                            <items>
+                                <label alignment="left" text="Hello " id="ocE-lY-IV1"/>
+                                <label alignment="left" text="Name" id="LWx-w3-5Qe"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="E7e-AI-pBM">
+                            <color key="color" red="0.60676753530000005" green="1" blue="0.99490033759999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <label alignment="left" text="Choose Difficulty" id="Qqb-MG-JVp"/>
+                        <button width="1" alignment="left" title="Easy " id="gck-lg-IrI">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="Fjy-pX-Ioo"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Hard" id="yy1-Cu-ugC">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="99O-Vn-cjg"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="resultedNameLabel" destination="LWx-w3-5Qe" id="1xM-E6-j5g"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-211" y="-295"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MemorizingApp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Memorize this" id="mzY-hg-lw5"/>
+                        <group width="1" alignment="left" id="a2i-zg-NZs">
+                            <items>
+                                <imageView width="32" height="32" alignment="left" id="vEi-ps-d2M"/>
+                                <imageView width="32" height="32" alignment="left" id="Do9-GR-YTQ"/>
+                                <imageView width="32" height="32" alignment="left" id="Cjo-0a-dih"/>
+                                <imageView width="32" height="32" alignment="left" id="VpK-xm-BLY"/>
+                            </items>
+                        </group>
+                        <group width="134" alignment="left" verticalAlignment="bottom" id="Akd-1B-1Et">
+                            <items>
+                                <imageView width="32" height="32" alignment="left" image="image1" id="b7N-iA-gIm"/>
+                                <imageView width="32" height="32" alignment="left" image="image2" id="faZ-Op-ndt"/>
+                                <imageView width="32" height="32" alignment="left" image="image3" id="r9T-OA-7EZ"/>
+                                <imageView width="32" height="32" alignment="left" image="image4" id="5MX-M3-mkw"/>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="19"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="image1" destination="vEi-ps-d2M" id="85U-Jc-ZGZ"/>
+                        <outlet property="imageThree" destination="Cjo-0a-dih" id="456-Pt-F5N"/>
+                        <outlet property="imageTwo" destination="Do9-GR-YTQ" id="QdS-HH-baf"/>
+                        <outlet property="imagefour" destination="VpK-xm-BLY" id="791-YE-hgh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="44" y="-327"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="99O-Vn-cjg"/>
+    </inferredMetricsTieBreakers>
+</document>
